@@ -23,8 +23,12 @@ const CommentList = props => {
   )
 }
 
+CommentList.defaultProps = {
+  comments: []
+}
+
 CommentList.propTypes = {
-  comments: PropTypes.array.isRequired,
+  comments: PropTypes.array,
   onRemoveComment: PropTypes.func
 }
 

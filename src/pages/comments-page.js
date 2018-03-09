@@ -24,7 +24,7 @@ const Page = props => {
 }
 
 Page.propTypes = {
-  comments: PropTypes.array.isRequired,
+  comments: PropTypes.array,
   commentAuthor: PropTypes.string,
   commentMessage: PropTypes.string,
   onCommentsFormAuthorChange: PropTypes.func,

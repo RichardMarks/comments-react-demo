@@ -2,6 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const CommentsForm = props => {
+  const onSubmit = (event) => {
+    event.preventDefault()
+
+    props.onSubmit && props.onSubmit(props.commentAuthor, props.commentMessage)
+  }
+
   return (
     <form>
       <div>
@@ -22,7 +28,9 @@ const CommentsForm = props => {
           value={props.commentMessage}
         />
       </div>
-      <button onClick={props.onSubmit}>Leave comment</button>
+      <button onClick={onSubmit}>
+        Leave comment
+      </button>
     </form>
   )
 }
